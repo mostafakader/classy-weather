@@ -1,0 +1,107 @@
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* جعل الحجم الأساسي 10px */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem; 
+  color: #333;
+  background-color: #f0f4f8;
+}
+
+/* تصميم التطبيق */
+.app {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 100rem;
+  padding: 4rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: auto;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  color: #0077b6;
+  margin-bottom: 2rem;
+}
+
+input {
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  border: 2px solid #0077b6;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #023e8a;
+}
+
+/* تصميم بيانات الطقس */
+.weather {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+}
+
+.day {
+  background-color: #caf0f8;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.day:hover {
+  background-color: #ade8f4;
+}
+
+.day span {
+  font-size: 4rem;
+}
+
+.loader {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ff6f61;
+}
+
+/* استعلامات إعلامية للتجاوب مع أحجام الشاشات المختلفة */
+@media (max-width: 600px) {
+  .weather {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .weather {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  input {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+}
